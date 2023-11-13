@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particular</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+</head>
+<body>
+    <header>
+        <h1 class="home">Home</h1>
+    </header>
+    <main class="customer">
+    <div id="formulariocliente">
+        <h1>Datos del cliente</h1>
+        <div id="Cliente">
+            <form id="paymentForm" action="Facturacio-c-e.html" method="post">
+                <div>
+                    <label>Nombre:</label>
+                    <input id="nombre" title="Nombre" placeholder="Nombre Completo" required class="text" pattern="^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+(?:\s+[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ]+){1,5}(?<!\s)$">
+                    <p id="message"></p>
+                </div>
+                <div class="next-to">
+                    <div>
+                        <select class="form-control" aria-label="Default select example" id="tipoDoc">
+                            <option value="selectDoc" id="selectDoc" hidden selected>Select</option>
+                            <option value="dni">DNI</option>
+                            <option value="nie">NIE</option>
+                            <option value="passport">PASSPORT</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label" for="documento">Documento</label>
+                        <input type="text" id="documento" class="text" required max="9" min="9"/>
+                    </div>
+                </div>
+                <div>
+                    <label>Teléfono:</label>
+                    <input id="telefono" title="Teléfono" placeholder="634634335" required pattern="[0-9]{9}" class="text" max="9">
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input id="email" title="Email" placeholder="ejemplo@gmail.com" required pattern="[a-zA-Z0-9.]+(?:\.[a-z0-9]+)*@(?:[a-z](?:[a-z]*[a-z])?\.)+[a-z](?:[a-z]*[a-z])?" type="email" class="text">
+                </div>
+                <div id="direccion">
+                    <label>Dirección</label>
+                    <input id="direccion" title="Dirección" placeholder="Dirección" class="text" required>
+                </div>
+                <div id="metodo-pago">
+                    <h3>Seleccione metodo de pago</h3>
+                    <div>
+                        <select name="Metodo_de_pago" id="opcionpago"
+                            class="form-control form-select form-select-lg mb-3">
+                            <option value="mastercard">MasterCard</option>
+                            <option value="paypal">Paypal</option>
+                            <option value="visa">Visa</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <input type="checkbox" class="terminosChecked" id="terminos" value="Acepto Terminos y condiciones" required>
+                    <label>Acepto Terminos y <a href="#" id="conditions">Condiciones de uso</a></label>
+                </div>
+                <button id="pagar" type="button" onclick="submitButton()">Pagar</button>
+            </form>
+        </div>
+        <div class="modal">
+            <div class="modal_container">
+                <h3 class="modal_title">Cuidado!</h3>
+                <p class="modal_info">Esta seguro de que quiere salir?</p>
+                <p class="modal_info">Se perderán los datos</p>
+                <div class="next">
+                    <a href="Facturacio-c-e.html" id="si" class="modal_linkButton">Si</a>
+                    <a id="no" class="modal_linkButton">No</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+    let doc = document.getElementById('documento');
+    doc.setAttribute('placeholder','12345678X');
+    doc.setAttribute('disabled','true');
+    selected(doc);
+    function selected(doc){  
+        var select = document.getElementById("tipoDoc");
+        let selectDisable = document.getElementById('selectDoc');
+        if(selectDisable.getAttribute(selected)){
+            select.setAttribute('disabled','true');
+        }
+    
+        select.addEventListener("change", function(){
+          var selectedOption = this.options[this.selectedIndex];
+          switch(selectedOption.getAttribute('value')){
+            case 'dni':
+                doc.removeAttribute('disabled','false');
+                doc.setAttribute('placeholder','12345678X');
+                doc.setAttribute('pattern',"[1-9][1-9][1-9][1-9][1-9][1-9][1-9][1-9][A-Z]");
+                doc.value = "";
+            break;
+            case 'nie':
+                doc.removeAttribute('disabled','false');
+                doc.setAttribute('placeholder','A1234567P');
+                doc.setAttribute('pattern',"[A-Z][1-9][1-9][1-9][1-9][1-9][1-9][1-9][A-Z]");
+                doc.value = "";
+            break;
+            case 'passport':
+                doc.removeAttribute('disabled','false');
+                doc.setAttribute('placeholder','ABC123456');
+                doc.setAttribute('pattern',"[A-Z][A-Z][A-Z][1-9][1-9][1-9][1-9][1-9][1-9]");
+                doc.value = "";
+            break;
+            case 'select':
+            doc.setAttribute('disabled','true');
+                break;
+          }
+        });
+    }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

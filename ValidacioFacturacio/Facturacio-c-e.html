@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario facturación</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div id="titol">
+            <h1>Facturación</h1>
+        </div>
+        <h1>Tipo de cliente</h1>
+        <div id="TipoCliente">
+            <div>
+                <input type="button" id="personafisica" name="drone" value="Persona Física" onclick="cambiaraClient()"/>
+                <input type="button" id="empresa" name="drone" value="Empresa" onclick="cambiaraEmpresa()"/>
+            </div>
+        </div>
+    </header>
+    <script>
+        function cambiaraClient(){
+            window.location.pathname = 'Particular.html';
+        }
+
+        function cambiaraEmpresa(){
+            window.location.pathname = 'Business.html';
+        }
+    </script>
+</body>
+</html>

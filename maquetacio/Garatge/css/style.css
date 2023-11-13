@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Playfair+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7e7e9ff;
+}
+
+/*  ----------------------------------------------- MENU DE NAVEGACIÓ Y HEADER-----------------------------------------------  */
+
+.navegador {
+    justify-content: center;
+    align-items: center;
+    background-color: #181d33ff;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    padding: 15px 0;
+}
+
+.navegador .col-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegador ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.navegador ul li a {
+    text-decoration: none;
+    color: #e7d381ff;
+    font-weight: bold;
+}
+
+/* LINKS Y NAVEGADORS OPACITAT HOVER */
+
+.primer-nav ul li a:hover,
+footer nav ul li a:hover {
+    opacity: 75%;
+}
+
+.primer-nav ul {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 300px;
+    padding: 0;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.input-busqueda {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 0px;
+}
+
+.boto-busqueda {
+    color: black;
+    background-color: #aa8e31ff;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    border: 1px solid #aa8e31ff;
+    border-radius: 0 40px 40px 0;
+    height: 40px;
+    width: 64px;
+}
+
+/*  -------------------------------------------------- IMATGES Y HOVERS DEL MENU -------------------------------------------------- */
+
+
+
+
+/*  ----------------------------------------------- FOOTER Y MENU NAVEGACIÓ FOOTER -----------------------------------------------  */
+
+
+footer {
+    background-color: #181d33ff;
+    width: 100%;
+}
+
+footer div nav {
+    justify-content: center;
+    align-items: center;
+    background-color: #181d33ff;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    padding: 15px 0;
+}
+
+footer div nav {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+footer div nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+footer div nav ul li:first-child {
+    padding-left: 30px;
+}
+
+footer div nav ul li a {
+    text-decoration: none;
+    color: #e7d381ff;
+    font-weight: bold;
+}
+
+.nom-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.nom-logo h3 {
+    color: #e7d381ff;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 5px;
+}
+
+.nom-logo img {
+    width: 30px;
+}
+
+footer hr {
+    border: 1px solid #e7d381ff;
+}
+
+footer div .separator {
+    width: 95%;
+}
+
+footer div {
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*  ----------------------------------------------- MAIN Y ELEMENTOS DEL MAIN -----------------------------------------------  */
+
+
+main {
+    height: auto;
+}
+
+
+/*  ----------------------------------------------- MASTERCARD -----------------------------------------------  */
+
+
+#mastercard-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mastercard {
+    background-color: #181d33ff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#mastercard form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mastercard form div.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#mastercard form label {
+    color: #e7e7e9ff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'DM Sans', sans-serif;
+    padding: 5px;
+    letter-spacing: 1px;
+}
+
+#mastercard form input.default {
+    outline: none;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    padding: 5px;
+    max-width: 100%;
+}
+
+#divFechaCVC {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0 15px
+}
+
+.box {
+    display: flex;
+    flex: 1;
+}
+
+.small {
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    padding: 5px;
+    max-width: 100px;
+}
+
+.extra-small {
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    padding: 5px;
+    max-width: 50px;
+}
+
+#confirmarpagament {
+    background-color: #e7d381ff;
+    color: #181d33ff;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: #181d33ff;
+    font-family: 'DM Sans', sans-serif;
+}
+
+main ::placeholder {
+    text-align: center;
+}
+
+.invalid {
+    border: 2px solid red;
+}
+
+.valid {
+    border: 2px solid green;
+}
+
+
+/*  ----------------------------------------------- GARATGE -----------------------------------------------  */
+
+#imatges-aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#imatges-aside img {
+    margin: 15px;
+}
+
+#garatge-body aside>div>h2 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 400;
+}
+
+#garage-table {
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+#table-div {
+    background-image: url("../img/logoBHEC.png");
+    background-size: 330px;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+}
+
+#garatge-body article h1 {
+    text-align: center;
+    font-size: 60px;
+    margin: 40px 0 2px 0;
+    font-weight: 400;
+}
+
+#garage-table {
+    width:70%;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#garage-table td {
+    padding: 10px 10px;
+    border-bottom: 1px solid black;
+}
+
+#garatge-body td.imagenV {
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+#garatge-body td.del {
+    border-bottom: none;
+}
+
+#garatge-body th {
+    padding: 5px;
+}
+
+#garatge-body table {
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+#garatge-body td {
+    text-align: center;
+}
+
+#garatge-body #subtotal td {
+    padding: 25px;
+}
+
+#garatge-body .cantidad button,
+#garatge-body .del button {
+    padding: 0 5px;
+    margin: 0 5px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+#garage-table {
+    margin: 0 auto;
+}
+
+#garatge-body hr {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#garatge-body table #subtotal td {
+    border-bottom: none;
+}
+
+#garatge-body #confirmarpagament {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* --------------------------------------------------------------------- MODAL --------------------------------------------------------------------- */
+
+
+/* Estilo del menú modal */
+.menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #e7e7e9ff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    overflow-y: auto;
+}
+
+.menu-content {
+    padding: 20px;
+}
+
+/* Estilo del botón de cierre y enlaces */
+.close-button {
+    float: right;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #555;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-links li {
+    margin-bottom: 10px;
+}
+
+/* Estilo de la imagen de perfil y detalles del usuario */
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.user-details p {
+    margin: 0;
+    color: #777;
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.dropdown-content li {
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.menu-modal #div-sessio {
+    margin: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+.menu-modal #tancar-sessio {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.menu-modal a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-family: 'DM Sans';
+}
+
+.menu-modal a:hover {
+    color: #555;
+}
+
+/* -------------------------------------------- RECTANGLE BLAU AMB LOGO ----------------------------------- */
+
+#banda-amb-logo {
+    bottom: 100px;
+    position: absolute;
+    width: 100%;
+}
+
+#rectangle-blau {
+    background-color: #181d33ff;
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+#rectangle-blau #titol-rectangle {
+    color: #e7e7e9ff;
+    text-align: center;
+    font-size: 36px;
+}
+
+#cercle-gris {
+    position: absolute;
+    bottom: -15px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #e7e7e9ff;
+    border-radius: 100% 100% 100% 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cercle-gris img {
+    width: 40px;
+}
+
+.navegador .navegador-icones-header .movil {
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+    .navegador .barra-busqueda {
+        display: none;
+    }
+
+    .navegador .navegador-icones-header .movil {
+        display: flex;
+    }
+}
+
+@media (max-width: 900px) {
+    .navegador .navegador-icones-header .ordinador {
+        display: none;
+    }
+
+    .navegador .navegador-icones-header .movil {
+        display: flex;
+    }
+
+    .navegador .barra-busqueda {
+        display: none;
+    }
+
+}
+
+
+#menu-visio-mobil{
+    display:none;
+}
+
+/* Estilo de los breakpoints */
+@media screen and (max-width: 850px) {
+
+    #garage-table {
+        display: block;
+    }
+
+    #garage-table tr:first-child{
+        display: none;
+    }
+
+    #garage-table>*,
+    #garage-table tr,
+    #garage-table td,
+    #garage-table th {
+        display: block;
+    }
+
+    #garage-table thead {
+        display: none;
+    }
+
+    #garage-table tbody tr {
+        height: auto;
+        padding: 8px 0;
+    }
+
+    #garage-table td:last-child {
+        margin-bottom: 0;
+    }
+
+    #garage-table td:before {
+        position: absolute;
+        font-weight: 700;
+        width: 40%;
+        left: 10px;
+        top: center;
+    }
+
+    #garage-table tr:not(:last-child) td:nth-child(3):before {
+        content: "Preu (€)";
+        text-align: left;
+    }
+
+    #garage-table tr:not(:last-child) td:nth-child(4):before {
+        content: "Quant.";
+        text-align: left;
+    }
+
+    #garage-table tr:not(:last-child) td:nth-child(5):before {
+        content: "Total (€)";
+        text-align: left;
+    }
+
+    #garage-table {
+        border-spacing: 1;
+        border-collapse: collapse;
+        border-radius: 6px;
+        overflow: hidden;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    #garage-table * {
+        position: relative;
+    }
+    
+    #garage-table td,
+    #garage-table th {
+        padding-left: 8px;
+    }
+    
+    #garage-table tbody tr:last-child {
+        border: 0;
+    }
+    
+    table tr td:nth-child(n+3) {
+        text-align: center;
+    }
+
+    #subtotal td:nth-child(-n+3) {
+        display: none;
+    }
+
+    aside {
+        order: 2;
+    }
+
+    article {
+        order: 1;
+    }
+      
+    #imatges-aside{
+        flex-direction: row;
+    }
+
+    #imatges-aside img{
+        width: 125px;
+        height: auto;
+    }
+
+    #table-div {
+        background-position: 50% 50%;
+    }
+
+}
+
+/*footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}*/
+
+#mastercard{
+    margin: 100px auto
+}
+

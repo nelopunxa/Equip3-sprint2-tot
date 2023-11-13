@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/grid.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="js/mastercard.js" defer></script>
+    <script src="js/modal.js" defer></script>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row navegador">
+            <nav class="col-4 primer-nav">
+                <img src="img/logoBHEC.png" width="50px">
+                <ul>
+                    <li>
+                        <a href="#">Catàleg</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacte</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="col-4 barra-busqueda">
+                <input type="text" class="input-busqueda" placeholder="Buscar...">
+                <button class="boto-busqueda">
+                    <i class="fas fa-search">
+
+                    </i>
+                </button>
+            </div>
+
+            <nav class="col-4 navegador-icones-header" >
+                <ul class="ordinador">
+
+                    <li>
+                        <a href="#">
+                            <img src="ico/notificacio-Groc.png" alt="Imatge Notificació" id="notificacio">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="ico/llistaDeDesitjos-Groc.png" alt="Imatge Llista De Dessitjos" id="desitjos">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="garatge.html">
+                            <img src="ico/garatge-Groc.png" alt="Imatge Garatge" id="garatge">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="no-sweetalert">
+                            <img src="ico/usuari-Groc.png" alt="Imatge Usuari" id="usuari">
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="movil">
+                    <li>
+                        <a href="#">
+                            <img src="ico/notificacio-Groc.png" alt="Imatge Notificació" id="notificacio">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="ico/llistaDeDesitjos-Groc.png" alt="Imatge Llista De Dessitjos" id="desitjos">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="ico/garatge-Groc.png" alt="Imatge Garatge" id="garatge">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="no-sweetalert">
+                            <img src="ico/usuari-Groc.png" alt="Imatge Usuari" id="usuari">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="mastercard-body">
+        <div class="container">
+            <div class="row">
+                <div id="mastercard" class="col-12">
+                    <form method="post" action="">
+                        <div class="column">
+                            <label for="Nombre del Titular">Nom del Titular:</label>
+                            <input class="default" id="nombredeltitular" title="Nombre del Titular" placeholder=""
+                                pattern="[A-Za-z]+" required>
+                        </div>
+                        <div class="column">
+                            <label for="Numero de Tarjeta">Número de Tarjeta:</label>
+                            <input class="default" id="numerotarjeta" title="Numero de Tarjeta"
+                                placeholder="XXXX XXXX XXXX XXXX" pattern="(\d{4}[ ]?){4}|\d{4}[ ]?\d{6}[ ]?\d{5}"
+                                required oninput="formatCardNumber(this)">
+                        </div>
+                        <div id="divFechaCVC" class="input-container">
+                            <div class="box column">
+                                <label for="expiracion"> exp:</label>
+                                <input class="small" id="expiracion" title="Fecha de expiracion de la tarjeta" placeholder="MM / AA"
+                                    pattern="^(0[1-9]|10|11|12) \/ ([0-9]{2})$" required>
+                            </div>
+                            <div class="box column">
+                                <label for="Codigo de Seguridad">CVC:</label>
+                                <input class="extra-small" id="codigoseguridad" title="Codigo de seguridad"
+                                    placeholder="XXX" pattern="[0-9]{3}" required>
+                            </div>
+                        </div>
+
+                        <button id="confirmarpagament">Pagar</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="menu-modal" class="menu-modal">
+        <div class="menu-content">
+            <a href="#" class="close-button no-sweetalert" onclick="closeMenuModal()">&times;</a>
+            <div class="user-info">
+                <img src="img/usuari.png" alt="Imagen de perfil">
+                <div class="user-details">
+                    <h3>Tu Nombre</h3>
+                    <p>correo@example.com</p>
+                </div>
+            </div>
+            <ul class="menu-links">
+                <li class="dropdown">
+                    <a href="#" id="catalog-menu-btn">Meues comandes</a>
+                <li><a href="#">Novetats</a></li>
+                </li>
+                <li class="dropdown">
+                    <a href="#" id="administration-menu-btn" class="no-sweetalert">Administració</a>
+                    <ul class="dropdown-content" id="administration-menu">
+                        <li><a href="#">Configuració del compter</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="banda-amb-logo">
+            <div id="rectangle-blau">
+                <p id="titol-rectangle">BHEC</p>
+                <div id="cercle-gris">
+                    <img src="img/logoBHEC.png" alt="Imagen del semicírculo">
+                </div>
+            </div>
+        </div>
+
+        <div id="div-sessio">
+            <ul>
+                <li id="tancar-sessio"><a href="#">Tancar Sessió</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <div id="menu-modal" class="menu-modal">
+        <div class="menu-content">
+            <a href="#" class="close-button" onclick="closeMenuModal()">&times;</a>
+            <div class="user-info">
+                <img src="img/usuari.png" alt="Imagen de perfil">
+                <div class="user-details">
+                    <h3>Tu Nombre</h3>
+                    <p>correo@example.com</p>
+                </div>
+            </div>
+            <ul class="menu-links">
+                <li class="dropdown">
+                    <a href="#" id="catalog-menu-btn">Catàleg</a>
+                    <ul class="dropdown-content" id="catalog-menu">
+                        <li><a href="#">Ferrari</a></li>
+                        <li><a href="#">Maserati</a></li>
+                        <li><a href="#">Porsche</a></li>
+                        <li><a href="#">Lamborghini</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Novetats</a></li>
+                <li class="dropdown">
+                    <a href="#" id="administration-menu-btn">Administració</a>
+                    <ul class="dropdown-content" id="administration-menu">
+                        <li><a href="#">Configuració del compter</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="div-sessio">
+            <ul>
+                <li id="tancar-sessio"><a href="#">Tancar Sessió</a></li>
+                <li id="tancar-sessio"><a href="#">Contactar amb nosaltres</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-12 nom-logo">
+                <img src="img/logoBHEC.png" alt="Logotip Empresa" width="50px">
+                <h3>BHEC</h3>
+            </div>
+            <hr class="separator" />
+        </div>
+
+        <div class="row">
+            <nav class="col-12">
+                <ul>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

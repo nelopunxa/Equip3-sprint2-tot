@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pagament via Visa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="Visa" class="visa">
+        <h1>Tarjeta VISA</h1>
+        <form id="formulari">
+            <p>Nombre del Titular:</p>
+            <input id="nombreTitular" title="Nombre del Titular" placeholder="Ej.: Mackenyu Arata"
+                pattern="^[a-zA-ZáéíóúÁÉÍÓÚüÜ\s]+$" required>
+            <p id="nomError" class="error"></p>
+            <p>Código de seguridad:</p>
+            <input id="codigoSeguridad" title="Codigo de seguridad" placeholder="CVV" pattern="^\d{3}$" max="1000"
+                required>
+            <p id="codigoError" class="error"></p>
+            <p>Número de Tarjeta:</p>
+            <input id="numeroTarjeta" title="Numero de Tarjeta" placeholder="XXXX XXXX XXXX XXXX" pattern="^\d{16}$"
+                required>
+            <p id="numTarjetaError" class="error"></p>
+            <p>Fecha de expiración:</p>
+            <input id="expiracion" title="expiracion" placeholder="MM/AA" pattern="^(0[1-9]|1[0-2])\/[0-9]{2}$"
+                required>
+            <p id="expiracionError" class="error"></p>
+            <button type="submit" id="confirmarPagament" name="submit">Confirmar</button>
+        </form>
+    </div>
+    <div class="popup" id="popup">
+        <div class="missatge">
+            <span class="tancar" id="tancarMissatge">×</span>
+            <p>Esta página tiene cookies.</p>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div class="cuidado">
+            <h2>¡Cuidado!</h2>
+            <p>Has hecho clic derecho.</p>
+            <button type="button" id="aceptar" name="submit">Cerrar</button>
+        </div>
+    </div>
+</body>
+
+</html>

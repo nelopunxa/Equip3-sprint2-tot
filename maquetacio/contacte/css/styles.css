@@ -1,0 +1,341 @@
+/* Secció per a les fonts */
+h1 {
+    font-family: 'DM Sans', sans-serif;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer,
+input,
+button {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Encapçalament */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.start {
+    background-color: rgb(24, 29, 52);
+}
+
+.logo {
+    display: flex;
+    float: left;
+    width: 80px;
+}
+
+.name {
+    display: flex;
+    color: rgb(231, 211, 129);
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+
+.name:hover {
+    color: rgb(170, 142, 49);
+}
+
+.contacto {
+    display: flex;
+    color: rgb(170, 142, 49);
+    padding-left: 15px;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+
+.search {
+    border-radius: 10px;
+    margin-left: 80px;
+}
+
+.color {
+    background-color: rgb(231, 211, 129);
+    border: none;
+}
+
+.color:hover {
+    background-color: rgb(170, 142, 49);
+}
+
+.icon {
+    width: 15px;
+}
+
+.hamburguer {
+    display: none;
+}
+
+.menuppal {
+    display: none;
+}
+
+.icon2 {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#notification:hover{
+    content: url('/media/notificacio-GrocOscur.png');
+}
+
+#wishes:hover {
+    content: url('/media/llistaDeDesitjos-GrocOscur.png');
+}
+
+#garage:hover {
+    content: url('/media/garatge-GrocOscur.png');
+}
+
+#user:hover {
+    content: url('/media/usuari-GrocOscur.png');
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+.final {
+    background-color: rgb(24, 29, 52);
+    position: fixed;
+    bottom: 0;
+}
+
+.name2 {
+    align-items: center;
+    color: rgb(231, 211, 129);
+}
+
+.name2 .logo2 {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.color2 {
+    color: rgb(231, 211, 129);
+}
+
+.links {
+    padding-bottom: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(231, 211, 129);
+    padding-left: 30px;
+}
+
+.link:hover {
+    color: rgb(170, 142, 49);
+}
+
+/* Cos */
+body {
+    background-color: rgb(231, 231, 233);
+    background-image: url(/media/logoBHEC.png);
+    background-repeat: no-repeat;
+    background-position: 150px 120px;
+    background-size: 32%;
+}
+
+label {
+    text-align: left;
+    display: block;
+}
+
+.cos h1 {
+    text-align: center;
+}
+
+.p1 {
+    position: relative;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.p2 {
+    text-align: center;
+}
+
+.p2 label {
+    padding: 10px;
+}
+
+#form_control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submit {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/* Versió telèfon */
+
+@media only screen and (max-width: 767px) {
+
+    /* Encapçalament */
+    .name {
+        display: none;
+    }
+
+    .contacto {
+        display: none;
+    }
+
+    .search {
+        width: 50%;
+    }
+
+    .icon2{
+        width: 100%;
+        padding-left: 25px;
+    }
+
+    /* Menú hamburguesa */
+
+    .hamburger {
+        position: fixed;
+        background-color: transparent;
+        right: 5%;
+        top: 3%;
+        height: 30px;
+        width: 30px;
+        padding: 20px 20px;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        z-index: 1002;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .hamburger.is-active {
+        background-color: none;
+    }
+
+    ._layer {
+        background: rgb(231, 211, 129);
+        margin-bottom: 4px;
+        border-radius: 2px;
+        width: 28px;
+        height: 4px;
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    }
+
+    .hamburger:hover .-top {
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    .hamburger:hover .-bottom {
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+
+    .hamburger.is-active .-top {
+        -webkit-transform: translateY(200%) rotate(45deg) !important;
+        -ms-transform: translateY(200%) rotate(45deg) !important;
+        transform: translateY(200%) rotate(45deg) !important;
+    }
+
+    .hamburger.is-active .-mid {
+        opacity: 0;
+    }
+
+    .hamburger.is-active .-bottom {
+        -webkit-transform: translateY(-200%) rotate(135deg) !important;
+        -ms-transform: translateY(-200%) rotate(135deg) !important;
+        transform: translateY(-200%) rotate(135deg) !important;
+    }
+
+    .menuppal.is_active {
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    .menuppal {
+        display: grid;
+        background-color: rgba(24, 29, 52);
+        text-align: center;
+        bottom: 0;
+        height: 40%;
+        right: 0;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        transform: translate3d(100%, 0px, 0px);
+        transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+        width: 60%;
+        z-index: 1001;
+    }
+
+    .menuppal ul {
+        margin-top: 100px;
+        padding-right: 30%;
+        padding-left: 40%;
+    }
+
+    .menuppal ul li {
+        list-style: none;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        line-height: 3em;
+        height: 3em;
+        font-weight: bold;
+    }
+
+    .menuppal ul li a {
+        text-decoration: none;
+        color: rgb(231, 211, 129);
+    }
+
+    .menuppal ul li a:hover {
+        text-decoration: none;
+        color: rgb(170, 142, 49);
+    }
+
+    .contacto2{
+        color: rgb(170, 142, 49);
+    }
+
+
+    /* Cos */
+    body {
+        background-image: url(/media/logoBHEC.png);
+        background-repeat: no-repeat;
+        background-position: 50% 81%;
+        background-size: 32%;
+    }
+
+    .p1 {
+        order: 2;
+        padding-top: 10%;
+        padding-bottom: 20%;
+    }
+
+    .p2 {
+        order: 1;
+    }
+}

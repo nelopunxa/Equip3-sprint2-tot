@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contacte</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js"></script>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container-fluid start">
+        <div class="row">
+            <div class="col-4">
+                <nav>
+                    <ul>
+                        <li>
+                            <img src="media/logoBHEC.png" alt="icon_logo" class="logo">
+                        </li>
+                        <li>
+                            <a href="#catalogo" class="name">Catálogo</a>
+                        </li>
+                        <li>
+                            <a href="#stock" class="name">Stock</a>
+                        </li>
+                        <li>
+                            <span  class="contacto">Contacto</span>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <div class="_layer -top"></div>
+                    <div class="_layer -mid"></div>
+                    <div class="_layer -bottom"></div>
+                </div>
+                <nav class="menuppal">
+                    <ul>
+                      <li><a href="#notificación">Catálogo</a></li>
+                      <li><a href="#deseos">Stock</a></li>
+                      <li><span class="contacto2">Contacto</span></li>
+                    </ul>
+                  </nav>
+            </div>
+            <div class="col-4">
+                <nav>
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="Búsqueda..." name="search" class="search">
+                            <button type="submit" class="color"><img src="media/busqueda.png" alt="icon_busqueda"
+                                    class="icon"></button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-4">
+                <nav>
+                    <ul>
+                        <li>
+                            <img src="media/notificacio-Groc.png" alt="icon_notification" class="icon2" id="notification">
+                        </li>
+                        <li>
+                            <img src="media/llistaDeDesitjos-Groc.png" alt="icon_wishes" class="icon2" id="wishes">
+                        </li>
+                        <li>
+                            <img src="media/garatge-Groc.png" alt="icon_garage" class="icon2" id="garage">
+                        </li>
+                        <li>
+                            <img src="media/usuari-Groc.png" alt="icon_user" class="icon2" id="user">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container cos">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div>
+                    <h1>CONTACTO</h1>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 p1">
+                <p>O si lo prefiere, nos puede contactar de las siguientes formas:</p>
+                <p>+34 123 123 123</p>
+                <p>gestio@bhec</p>
+            </div>
+            <div class="col-4 p2">
+                <form id="form_control">
+                    <label for="nom">Nombre* </label>
+                    <input type="text" id="nom" name="nom" placeholder="Nombre" required>
+
+                    <label for="email">Email* </label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+
+                    <label for="comanda">Nº de pedido* </label>
+                    <input type="text" id="comanda" name="comanda" placeholder="Pedido" required>
+
+
+                    <label for="assumpte">Asunto*</label>
+                    <input type="text" id="assumpte" name="assumpte" placeholder="Asunto" required>
+
+
+                    <label for="motiu">Motivo de la consulta*</label>
+                    <select name="motiu" id="motiu" required>
+                        <option disabled selected value="">Motivo de la consulta</option>
+                        <option>Incidencias transporte</option>
+                        <option>Ventas y/u otra información</option>
+                        <option>Garantía</option>
+                    </select>
+
+
+                    <label for="missatge">Mensaje </label>
+                    <textarea id="missatge" name="missatge" placeholder="Mensaje" required></textarea>
+
+
+                    <input type="submit" id="submit">
+                </form>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="container-fluid final">
+        <div class="row">
+            <div class="col-12 name2">
+                <footer>
+                    <p><img src="media/logoBHEC.png" alt="icon_logo" class="logo2">BHEC</p>
+                    <hr class="color2">
+                </footer>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5 links">
+                <footer>
+                    <a href="#faq" class="link">Catálogo</a> <a href="#condiciones" class="link">Términos y
+                        condiciones</a>
+                    <a href="#privacidad" class="link">Pólitica de privacidad</a>
+                </footer>
+            </div>
+            <div class="col-7"></div>
+        </div>
+    </div>
+</body>
+
+</html>
